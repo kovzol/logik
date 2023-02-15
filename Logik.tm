@@ -3439,7 +3439,7 @@
   <\equation*>
     \<exists\>x<rsub|1>,x<rsub|2>,y<rsub|1>,y<rsub|2>
     <around*|(|\<forall\>a<rsub|1>,a<rsub|2>
-    <around*|(|x<rsub|1>\<leqslant\>a\<wedge\>a\<leqslant\>x<rsub|2>\<wedge\>y<rsub|1>\<leqslant\>b\<wedge\>b\<leqslant\>y<rsub|2>|)>|)>
+    <around*|(|x<rsub|1>\<leqslant\>a<rsub|1>\<wedge\>a<rsub|1>\<leqslant\>x<rsub|2>\<wedge\>y<rsub|1>\<leqslant\>a<rsub|2>\<wedge\>a<rsub|2>\<leqslant\>y<rsub|2>|)>|)>
   </equation*>
 
   Das ist natürlich auch falsch, aber es zeigt, dass der Spaÿ so lange
@@ -7180,7 +7180,7 @@
         Gröÿe der Ausgabe, und die folgenden Zahlen sind die minimalen und
         maximalen <with|mode|<quote|math>|x>- und
         <with|mode|<quote|math>|y>-Koordinaten. Das Programm kann unter
-        <locus|<id|%-53ECB81E8--53E1E81A0>|<link|hyperlink|<id|%-53ECB81E8--53E1E81A0>|<url|https://matek.hu/tarski/webtarski.html>>|<with|font-family|<quote|tt>|language|<quote|verbatim>|https://matek.hu/tarski/webtarski.html>>
+        <locus|<id|%-4E6633268--4E5B620B8>|<link|hyperlink|<id|%-4E6633268--4E5B620B8>|<url|https://matek.hu/tarski/webtarski.html>>|<with|font-family|<quote|tt>|language|<quote|verbatim>|https://matek.hu/tarski/webtarski.html>>
         getestet werden.
       </surround>|<pageref|auto-140>>
 
@@ -7203,7 +7203,7 @@
 
       <tuple|normal|<\surround|<hidden-binding|<tuple>|5.1>|>
         Jährliche Statistiken über die Zahl der Veröffentlichungen in der
-        Mathematik, 1996\U2014. Quelle: <locus|<id|%-53ECB81E8--53E1BBD40>|<link|hyperlink|<id|%-53ECB81E8--53E1BBD40>|<url|https://mathoverflow.net/questions/233984/how-many-papers-are-posted-a-year>>|<with|font-family|<quote|tt>|language|<quote|verbatim>|https://mathoverflow.net/questions/233984/how-many-papers-are-posted-a-year>>.
+        Mathematik, 1996\U2014. Quelle: <locus|<id|%-4E6633268--4E5B35E38>|<link|hyperlink|<id|%-4E6633268--4E5B35E38>|<url|https://mathoverflow.net/questions/233984/how-many-papers-are-posted-a-year>>|<with|font-family|<quote|tt>|language|<quote|verbatim>|https://mathoverflow.net/questions/233984/how-many-papers-are-posted-a-year>>.
       </surround>|<pageref|auto-160>>
     </associate>
     <\associate|gly>
