@@ -60,8 +60,12 @@
   Fangen wir gleich damit an!
 
   <\padded-right-aligned>
-    Der Autor, September 2022, Jänner 2023
+    Der Autor, September 2022, Jänner 2023, April 2024
   </padded-right-aligned>
+
+  \;
+
+  \;
 
   <chapter|Was bedeutet \RLogik\P?>
 
@@ -2267,6 +2271,130 @@
     <item>Leiten Sie die Lösung des Rätsels des Gefangenen im fünften Versuch
     in Aris ab.
   </enumerate>
+
+  <subsection|GNU Aris Web-Version><label|aris-web>
+
+  Die Web-Version von GNU Aris ist sehr einfach zu bedienen und funktioniert
+  sehr ähnlich wie die zuvor gezeigte Download-Version. Wir werden wieder das
+  Einstigesbeispiel von vorhin überprüfen, danach wird ein schwereres
+  Beispiel folgen. Mit dem Button <key|+>/<key|-> \ können wir eine neue
+  Prämisse eingeben.
+
+  <\big-figure>
+    <image|aris-web/AA1.png|400pt|||>
+  <|big-figure>
+    <label|aris-web-1>
+  </big-figure>
+
+  Wieder sehen wir in Abbildung <reference|aris-web-1> in den ersten 3 Zeilen
+  unsere Prämissen (=<with|font-shape|italic|premise>), danach in Zeile 4
+  kommt die erste Schlussfolgerung <math|Q>. Bevor wir zeigen können, dass
+  <math|Q> wirklich wahr ist, müssen wir dem Programm die Befehle
+  <with|font-shape|italic|Inference> und <with|font-shape|italic|Modus
+  Ponens> angeben. Weiters ist es nötig die Zeilen anzugeben auf welche sich
+  der Modus Ponens bezieht, das wird in Abbildung <reference|aris-web-2>
+  veranschaulicht.
+
+  <\big-figure|<image|aris-web/AA2.png|400pt|||>>
+    <label|aris-web-2>
+  </big-figure>
+
+  Wir sehen, dass die Zeilen 1 und 2 markiert wurden, da auf diese Zeilen der
+  Modus Ponens für die 4.<strong|> Zeile angewendet wurde. Damit wir auch
+  später noch nachsehen können, welche Zeilen verwendet wurden, wird in Zeile
+  4 nun ein Kästchen mit 1 und 2 angezeigt. Nun können wir überprüfen, ob
+  Zeile 4 wirklich wahr ist, dafür gibt es einen Button beim Programm,
+  anschlieÿend sollten alle Aussagen grün aufleuchten.
+
+  <\big-figure|<image|aris-web/AA3.png|30pt|||>>
+    <label|aris-web-3>
+  </big-figure>
+
+  Die abgebildete Leiste ist im Programm am linken Bildschirmrand zu finden.
+  Hier sind alle Operationen abgebildet, die man in der Aussagenlogik
+  brauchen kann, der unterste Button ist der angesprochene
+  \RÜberprüfebutton\P. Wenn man für Zeile 4 alles richtig gemacht hat, muss
+  das Ergebnis wie in Abbildung <reference|aris-web-4> aussehen.
+
+  <\big-figure|<image|aris-web/AA4.png|400pt|||>>
+    <label|aris-web-4>
+  </big-figure>
+
+  Nun haben wir bewiesen, dass die Aussage <math|Q> richtig ist. Im Beweis
+  gehen wir nun einen Schritt weiter und zeigen mit Hilfe der Konjunktion,
+  dass auch die Aussage <math|P\<wedge\> Q> richtig ist. Hierbei beziehen wir
+  uns auf die Zeilen 2 und 4. Im letzten Schritt verwenden wir erneut den
+  Modus Ponens, dabei beziehen wir uns auf die Zeilen 5 sowie 3. Wenn wir nun
+  auf den Überprüfebutton drücken, können wir sehen, dass die Aussage
+  <math|R> tatsächlich richtig ist, und der Beweis ist fertig.
+
+  <\big-figure|<image|aris-web/AA8.png|300pt|||>>
+    <label|aris-web-5>
+  </big-figure>
+
+  Wir werden nun ein viel komplexeres Beispiel analysieren. Unter den zuvor
+  beschriebenen Rätseln formulieren wir den Fall des vierten Gefangenen wie
+  folgt: <math|D1> bedeutet, dass sich eine Dame in Raum I befindet, während
+  <math|S1> bedeutet, dass das Schild in Raum I wahr ist. Auÿerdem bedeutet
+  <math|D2>, dass sich eine Dame in Raum II befindet, während <math|S2>
+  bedeutet, dass die Überschrift von Raum II wahr ist. Die Aufgabenstellung
+  enthält vier Hypothesen: <math|H<rsub|1>=D1\<Leftrightarrow\>S1>,
+  <math|H<rsub|2>=D2\<Leftrightarrow\>\<neg\>S2>,
+  <math|H<rsub|3>=S1\<Leftrightarrow\><around*|(|D1\<wedge\>D2|)>> und
+  <math|H<rsub|4>=S2\<Leftrightarrow\><around*|(|D1\<wedge\>D2|)>>. In der
+  Web-Version von GNU Aris kann man das ganz einfach wie beim Beispiel zuvor
+  eingeben. Die 4 Prämissen <math|H<rsub|1>> bis <math|H<rsub|4>> werden
+  wiederum von Anfang an als wahr angenommen, das wird in Abbildung
+  <reference|aris-web-6><strong|> veranschaulicht.
+
+  <\big-figure|<image|aris-web/AA5.png|400pt|||>>
+    <label|aris-web-6>
+  </big-figure>
+
+  In Zeile 5 starten wir einen sogennanten Unterbeweis
+  (=<with|font-shape|italic|subproof>), welchen wir am Ende auf eine falsche
+  Aussage führen. Dabei wird <math|D1> auch als wahr angenommen. In Zeile 6
+  beginnen wir wieder Schlussfolgerungen zu bilden, in diesem Fall verwenden
+  wir die Äquivalenz aus Zeile 1 in zwei Implikationen aufgespalten, die mit
+  einer Konjunktion verknüpft werden. Da diese Aussage wahr ist, müssen beide
+  Teile der Konjuktion wahr sein, also ist im speziellen die Aussage <math|D1
+  \<Rightarrow\>S1> wahr, das sehen wir in Zeile 7
+  (<with|font-shape|italic|Simplification> in Bezug auf die Zeile 6).
+
+  <\big-figure|<image|aris-web/AA9.png|400pt|||>>
+    <label|aris-web-7>
+  </big-figure>
+
+  In Zeile 8 wird erneut der Modus Ponens verwendet, da die Zeilen 5 und 7
+  richtig sind, muss auch <with|font-shape|italic|S1> gelten. Diese Schritte
+  werden nun auch für die anderen Prämissen analog gemacht. Für die Prämisse
+  in Zeile 3 gelten die Zeilen 9\U12. Für die Prämisse in Zeile 4 gelten die
+  Zeilen 13\U15 und für die Prämisse in Zeile 2 gelten die Zeilen 16\U18. Die
+  genauen Eingaben für die Zeilen 9\U18 können in Abbildung
+  <reference|aris-web-8> nachvollzogen werden.
+
+  <\big-figure|<image|aris-web/AA10.png|400pt|||>>
+    <label|aris-web-8>
+  </big-figure>
+
+  Man kann erkennen, dass im Beweis ein Widerspruch vorkommt. In Zeile 15
+  sehen wir, dass <math|S2> gilt, in Zeile 18 sehen wir, dass
+  <math|\<neg\>S2> gilt. Dies haben wir in Zeile 19 und 20 in den Beweis
+  miteingebracht. Nach Zeile 20 beenden wir unseren Unterbeweis und zeigen
+  welche Auswirkungen das auf unseren richtigen Beweis hat.
+
+  <\big-figure>
+    <image|aris-web/AA11.png|400pt|||>
+  <|big-figure>
+    <label|aris-web-9>
+  </big-figure>
+
+  Aus der Annahme, dass <math|D1> gilt, haben wir also in Zeile 23
+  geschlossen, dass auch <math|\<neg\>D1>. Nachdem man auf den
+  Überprüfebutton drückt, leuchten alle Zeilen grün auf: das heiÿt, dass wir
+  keinen Fehler gemacht haben und dass wir einen Beweis durch Widerspruch
+  gefunden haben. <with|font-shape|italic|D1> kann also niemals gelten und
+  somit befindet sich sicher keine Dame in Raum I.
 
   <section|SAT-solver>
 
@@ -4499,7 +4627,7 @@
   insgesamt 59 Scheiben erhält. Es ist wichtig zu beachten, dass Streifen
   ohne Ausdehnung (0 Breite) ebenfalls als Scheiben gezählt werden.
 
-  <\big-figure|<image|cad/cad1.png|162pt|||>>
+  <\big-figure|<image|cad/cad1.png|200pt|||>>
     <label|cad1>
   </big-figure>
 
@@ -4539,10 +4667,9 @@
     <item>Betrachten wir erneut die Aussage <math|\<exists\> x
     <around*|(|\<forall\> y <around*|(|x\<cdot\> y=0|)>|)>>. Das Polynom
     <math|x\<cdot\> y=0> definiert eine Kurve, die die Vereinigung der beiden
-    Achsen ist. In Abbildung <reference|cad2> sehen wir diese Situation, aber
-    die Achsen sind nicht getrennt aufgetragen.
+    Achsen ist. In Abbildung <reference|cad2> sehen wir diese Situation.
 
-    <\big-figure|<image|cad/cad2.png|162pt|||>>
+    <\big-figure|<image|cad/cad2.png|200pt|||>>
       <label|cad2>
     </big-figure>
 
@@ -4609,17 +4736,11 @@
     <math|x-y<rsup|2>\<less\>0>, die die Kurve <math|x-y<rsup|2>=0>
     definiert. Da die gesamte Formel mit <math|x> beginnt, schneiden wir
     parallel zur <math|y>-Achse. Abbildung <reference|cad3> zeigt diese
-    Situation (wiederum ohne Achsen -- dies liegt daran, dass das zur
-    grafischen Darstellung verwendete Programm <name|Tarski>
-    <cite|ValeEnriquez-Brown> diese Möglichkeit noch nicht bietet).
+    Situation.
 
-    <\big-figure|<image|cad/cad3.png|162pt|||>>
-      <label|cad3>Ausgabe des <name|Tarski>-Programms für die Eingabe
-      <verbatim|(plot2d [x\<less\>y^2] "400 400 -5 5 -5 5 -")>. Hier ist
-      \R400 400\P die Gröÿe der Ausgabe, und die folgenden Zahlen sind die
-      minimalen und maximalen <math|x>- und <math|y>-Koordinaten. Das
-      Programm kann unter <slink|https://matek.hu/tarski/webtarski.html>
-      getestet werden.
+    <\big-figure|<image|cad/cad3.png|200pt|||>>
+      <label|cad3>Ausgabe von GeoGebra Discovery für die Eingabe
+      <verbatim|Zeichne2D(x\<less\>y^2,"x")>.
     </big-figure>
 
     Unsere Hauptschnitte sind: <math|x\<less\>0> (A), <math|x=0> (B) und
@@ -4662,12 +4783,9 @@
 
     \;
 
-    <\big-figure|<image|cad/cad4.png|162pt|||>>
-      <label|cad4>Eine Version der Ausgabe des <name|Tarski>-Programms,
-      gespiegelt an der Geraden <math|y=x>, erzeugt durch die Eingabe
-      <verbatim|(plot2d [y\<gtr\>0 /\\ x^2=(x+y)^2] "400 400 -5 5 -5 5 -"
-      '(ord (y x)))>. Hier gibt das Ende des Befehls an, dass das Slicing
-      \Rin umgekehrter Richtung\P zur Standardeinstellung erfolgen soll.
+    <\big-figure|<image|cad/cad4.png|200pt|||>>
+      <label|cad4>Ausgabe von GeoGebra Discovery, erzeugt durch die Eingabe
+      <verbatim|Zeichne2D(y\<gtr\>0 && x^2==(x+y)^2, "y")>.
     </big-figure>
 
     Auch hier entstehen drei Hauptzylinder, die durch die Kurven <math|y=0>
@@ -4766,16 +4884,6 @@
     im zweiten auf die <math|y>-Achse. Überprüfen Sie, ob die Projektionen
     tatsächlich völlig gleich oder völlig unterschiedlich sind und ob ihre
     Vereinigung wirklich den gesamten Zahlenstrahl abdeckt.
-
-    <item>Die <name|Tarski>-Software ergab das Original des in Abbildung
-    <reference|cad4> gezeigten Bildes, gespiegelt an der Geraden <math|y=x>.
-    Der Autor dieses Skriptums musste die Originalausgabe mit der Software
-    GIMP umwandeln, die keine direkte Möglichkeit für eine solche Spiegelung
-    bietet. Was jedoch schnell verfügbar ist: vertikale Spiegelung,
-    horizontale Spiegelung, Drehung um <math|+90<rsup|\<circ\> >>, Drehung um
-    <math|-90<rsup|\<circ\> >>, Drehung um <math|180<rsup|\<circ\> >>. Wie
-    würde eine Kombination dieser Optionen die gewünschte Spiegelung
-    erreichen?
   </enumerate>
 
   <section|Herleitbarkeit in der euklidischen Geometrie>
@@ -6057,7 +6165,9 @@
   Versionen des Skriptums durchgesehen und einige korrigierende Anmerkungen
   gemacht haben. Dank an <with|font-shape|italic|Alexander Thaller>, der
   aktiv an der ersten Version des Kurses teilgenommen und das Aris-Programm
-  verbessert hat.
+  verbessert hat. <with|font-shape|italic|Aaron Windischbauer> und
+  <with|font-shape|italic|Dominik Raab> haben bei der Vorbereitung des
+  Kapitels <reference|aris-web> viel geholfen.
 
   Die letzten 4 Schachprobleme in Kapitel 4 wurden von
   <with|font-shape|italic|Domonkos Kovács> erstellt.
@@ -6222,33 +6332,33 @@
     <glossary-2|PDF|Portable Document Format|<pageref|auto-84>>
 
     <glossary-2|DIMACS|Center for Discrete Mathematics and Theoretical
-    Computer Science|<pageref|auto-94>>
+    Computer Science|<pageref|auto-104>>
 
-    <glossary-2|CAD|Cylindrical Algebraic Decomposition|<pageref|auto-136>>
+    <glossary-2|CAD|Cylindrical Algebraic Decomposition|<pageref|auto-146>>
   </the-glossary>
 
   <\the-index|idx>
     <index+1|AXolotl|<pageref|auto-38>>
 
-    <index+1|Bachet-Spiel|<pageref|auto-127>>
+    <index+1|Bachet-Spiel|<pageref|auto-137>>
 
-    <index+1|CAD|<pageref|auto-137>>
+    <index+1|CAD|<pageref|auto-147>>
 
     <index+1|CNF|<pageref|auto-17>>
 
-    <index+1|Coq|<pageref|auto-156>>
+    <index+1|Coq|<pageref|auto-166>>
 
-    <index+1|DIMACS-CNF|<pageref|auto-95>>
+    <index+1|DIMACS-CNF|<pageref|auto-105>>
 
     <index+1|DNF|<pageref|auto-15>>
 
     <index+1|Fallunterscheidung|<pageref|auto-9>>
 
-    <index+1|Gödelscher Unvollständigkeitssatz|<pageref|auto-164>>
+    <index+1|Gödelscher Unvollständigkeitssatz|<pageref|auto-174>>
 
-    <index+1|Gödelscher Vollständigkeitssatz|<pageref|auto-150>>
+    <index+1|Gödelscher Vollständigkeitssatz|<pageref|auto-160>>
 
-    <index+1|GeoGebra Discovery|<pageref|auto-105>>
+    <index+1|GeoGebra Discovery|<pageref|auto-115>>
 
     <index+1|GNU Aris|<pageref|auto-72>>
 
@@ -6256,62 +6366,62 @@
 
     <index+1|Hilbert-Kalkül|<pageref|auto-34>>
 
-    <index+1|HOL Light|<pageref|auto-158>>
+    <index+1|HOL Light|<pageref|auto-168>>
 
     <index+1|Hypothese|<pageref|auto-25>>
 
     <index+1|implikative Tautologie|<pageref|auto-27>>
 
-    <index+1|Isabelle|<pageref|auto-159>>
+    <index+1|Isabelle|<pageref|auto-169>>
 
-    <index+1|Keplersche Vermutung|<pageref|auto-157>>
+    <index+1|Keplersche Vermutung|<pageref|auto-167>>
 
     <index+1|Konklusion|<pageref|auto-24>>
 
     <index+1|Kontraposition|<pageref|auto-32>>
 
-    <index+1|LEAN|<pageref|auto-161>>
+    <index+1|LEAN|<pageref|auto-171>>
 
     <index+1*|Logik>
 
-    <index+2|Logik|erster Stufe|<pageref|auto-100>>
+    <index+2|Logik|erster Stufe|<pageref|auto-110>>
 
-    <index+2|Logik|nullter Stufe|<pageref|auto-99>>
+    <index+2|Logik|nullter Stufe|<pageref|auto-109>>
 
     <index+1|L<rsup|<space|-0.8spc><move|A|0fn|-0.1fn>><space|-0.2spc>T<rsub|<space|-0.4spc><move|<resize|<with|math-level|0|E>||||0.5fn>|0fn|-0.1fn>><space|-0.4spc>X|<pageref|auto-51>,
     <pageref|auto-83>>
 
     <index+1|Mathematica|<pageref|auto-19>>
 
-    <index+1|Minisat|<pageref|auto-96>>
+    <index+1|Minisat|<pageref|auto-106>>
 
-    <index+1|Modallogik|<pageref|auto-167>>
+    <index+1|Modallogik|<pageref|auto-177>>
 
     <index+1|modus ponens|<pageref|auto-33>>
 
     <index+1|Prämisse|<pageref|auto-23>>
 
-    <index+1|Pränexform|<pageref|auto-113>>
+    <index+1|Pränexform|<pageref|auto-123>>
 
     <index+1|Rückwärtsverkettung|<pageref|auto-37>>
 
-    <index+1|reelle Quantorenelimination|<pageref|auto-110>>
+    <index+1|reelle Quantorenelimination|<pageref|auto-120>>
 
-    <index+1|SAT-Solver|<pageref|auto-88>>
+    <index+1|SAT-Solver|<pageref|auto-98>>
 
-    <index+1|Tarski\USeidenberg-Theorem|<pageref|auto-142>>
+    <index+1|Tarski\USeidenberg-Theorem|<pageref|auto-152>>
 
     <index+1|These|<pageref|auto-26>>
 
     <index+1|Umschreibregel|<pageref|auto-39>>
 
-    <index+1|Vier-Farben-Satz|<pageref|auto-155>>
+    <index+1|Vier-Farben-Satz|<pageref|auto-165>>
 
     <index+1|Wahrheitstafel|<pageref|auto-12>>
 
     <index+1|Wolfram\|Alpha|<pageref|auto-14>>
 
-    <index+1|WolframScript|<pageref|auto-89>>
+    <index+1|WolframScript|<pageref|auto-99>>
 
     <index+1|zulässige Ausdrücke|<pageref|auto-31>>
   </the-index>
@@ -6467,177 +6577,181 @@
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-86>>
 
+    <with|par-left|1tab|3.6.4.<space|2spc>GNU Aris Web-Version
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-87>>
+
     3.7.<space|2spc>SAT-solver <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-87>
+    <no-break><pageref|auto-97>
 
     <with|par-left|1tab|3.7.1.<space|2spc>Wir formalisieren das logische
     Labyrinth <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-90>>
+    <no-break><pageref|auto-100>>
 
     <with|par-left|1tab|3.7.2.<space|2spc>Die Mathematica-Formel und ihre
     Analyse <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-91>>
+    <no-break><pageref|auto-101>>
 
     <with|par-left|1tab|3.7.3.<space|2spc>Aufgaben zur Formalisierung
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-92>>
+    <no-break><pageref|auto-102>>
 
     <with|par-left|1tab|3.7.4.<space|2spc>Erfüllbarkeit
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-93>>
+    <no-break><pageref|auto-103>>
 
     <with|par-left|1tab|3.7.5.<space|2spc>Aufgaben
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-97>>
+    <no-break><pageref|auto-107>>
 
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|font-shape|small-caps|4.<space|2spc>Prädikatenlogik>
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <pageref|auto-98><vspace|0.5fn>
+    <pageref|auto-108><vspace|0.5fn>
 
     4.1.<space|2spc>Syntax <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-101>
+    <no-break><pageref|auto-111>
 
     <with|par-left|1tab|4.1.1.<space|2spc>Die Schreibweise in Aris
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-102>>
+    <no-break><pageref|auto-112>>
 
     <with|par-left|1tab|4.1.2.<space|2spc>Die Schreibweise in Mathematica
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-103>>
+    <no-break><pageref|auto-113>>
 
     <with|par-left|1tab|4.1.3.<space|2spc>Die Schreibweise in GeoGebra
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-104>>
+    <no-break><pageref|auto-114>>
 
     4.2.<space|2spc>Operationen <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-106>
+    <no-break><pageref|auto-116>
 
     4.3.<space|2spc>Die Grundmenge <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-107>
+    <no-break><pageref|auto-117>
 
     <with|par-left|1tab|4.3.1.<space|2spc>Aufgaben
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-108>>
+    <no-break><pageref|auto-118>>
 
     4.4.<space|2spc>Reelle Quantorenelimination
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-109>
+    <no-break><pageref|auto-119>
 
     <with|par-left|1tab|4.4.1.<space|2spc>Aufgaben
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-111>>
+    <no-break><pageref|auto-121>>
 
     4.5.<space|2spc>Pränexforme <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-112>
+    <no-break><pageref|auto-122>
 
     <with|par-left|1tab|4.5.1.<space|2spc>Aufgaben
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-114>>
+    <no-break><pageref|auto-124>>
 
     4.6.<space|2spc>Suchen nach Gewinnstrategie
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-115>
+    <no-break><pageref|auto-125>
 
     <with|par-left|1tab|4.6.1.<space|2spc>Aufgaben
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-121>>
+    <no-break><pageref|auto-131>>
 
     4.7.<space|2spc>Schach und Matt! <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-122>
+    <no-break><pageref|auto-132>
 
     <with|par-left|1tab|4.7.1.<space|2spc>Alternative: Das Bachet-Spiel
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-126>>
+    <no-break><pageref|auto-136>>
 
     <with|par-left|1tab|4.7.2.<space|2spc>Anwendungen
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-128>>
+    <no-break><pageref|auto-138>>
 
     <with|par-left|1tab|4.7.3.<space|2spc>Aufgaben
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-129>>
+    <no-break><pageref|auto-139>>
 
     4.8.<space|2spc>CAD <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-135>
+    <no-break><pageref|auto-145>
 
     <with|par-left|1tab|4.8.1.<space|2spc>Aufgaben
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-143>>
+    <no-break><pageref|auto-153>>
 
     4.9.<space|2spc>Herleitbarkeit in der euklidischen Geometrie
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-145>
+    <no-break><pageref|auto-155>
 
     <with|par-left|1tab|4.9.1.<space|2spc>Aufgaben
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-146>>
+    <no-break><pageref|auto-156>>
 
     <with|par-left|1tab|4.9.2.<space|2spc>Herleitungen nur mit Polynomen
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-147>>
+    <no-break><pageref|auto-157>>
 
     <with|par-left|1tab|4.9.3.<space|2spc>Aufgaben
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-148>>
+    <no-break><pageref|auto-158>>
 
     4.10.<space|2spc>Ohne Grundmenge <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-149>
+    <no-break><pageref|auto-159>
 
     <with|par-left|1tab|4.10.1.<space|2spc>Aufgaben
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-151>>
+    <no-break><pageref|auto-161>>
 
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|font-shape|small-caps|5.<space|2spc>Logiken
     höherer Stufen> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <pageref|auto-153><vspace|0.5fn>
+    <pageref|auto-163><vspace|0.5fn>
 
     5.1.<space|2spc>Maschinelle Beweise <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-154>
+    <no-break><pageref|auto-164>
 
     <with|par-left|1tab|5.1.1.<space|2spc>Aufgaben
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-162>>
+    <no-break><pageref|auto-172>>
 
     5.2.<space|2spc>Ist alles, was wahr ist, beweisbar?
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-163>
+    <no-break><pageref|auto-173>
 
     <with|par-left|1tab|5.2.1.<space|2spc>Aufgaben
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-165>>
+    <no-break><pageref|auto-175>>
 
     5.3.<space|2spc>Gibt es Gott? <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-166>
+    <no-break><pageref|auto-176>
 
     <with|par-left|1tab|5.3.1.<space|2spc>Was sagt Gott dazu?
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-168>>
+    <no-break><pageref|auto-178>>
 
     <with|par-left|2tab|Die Juden <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-169>>
+    <no-break><pageref|auto-179>>
 
     <with|par-left|2tab|Die Christen <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-170>>
+    <no-break><pageref|auto-180>>
 
     <with|par-left|1tab|5.3.2.<space|2spc>Aufgaben
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-171>>
+    <no-break><pageref|auto-181>>
 
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|font-shape|small-caps|6.<space|2spc>Danksagungen>
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <pageref|auto-172><vspace|0.5fn>
+    <pageref|auto-182><vspace|0.5fn>
 
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|font-shape|small-caps|Literaturverzeichnis>
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <pageref|auto-173><vspace|0.5fn>
+    <pageref|auto-183><vspace|0.5fn>
 
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|font-shape|small-caps|Glossar>
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <pageref|auto-174><vspace|0.5fn>
+    <pageref|auto-184><vspace|0.5fn>
 
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|font-shape|small-caps|Index>
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <pageref|auto-175><vspace|0.5fn>
+    <pageref|auto-185><vspace|0.5fn>
   </table-of-contents>
 </body>
 
@@ -6650,15 +6764,15 @@
 
 <\references>
   <\collection>
-    <associate|100000|<tuple|5.1|77>>
+    <associate|100000|<tuple|5.1|79>>
     <associate|3-1-impl|<tuple|3.1|14>>
     <associate|3-2-impl|<tuple|3.2|14>>
     <associate|3-3-impl|<tuple|3.3|15>>
     <associate|3-4-impl|<tuple|3.4|15>>
     <associate|3-5-impl|<tuple|3.5|15>>
     <associate|3-6-impl|<tuple|3.6|15>>
-    <associate|4-5-1|<tuple|4.5.1|52>>
-    <associate|4-5-1-1|<tuple|1|52>>
+    <associate|4-5-1|<tuple|4.5.1|54>>
+    <associate|4-5-1-1|<tuple|1|54>>
     <associate|AX1|<tuple|3.1|20>>
     <associate|AX10|<tuple|3.10|26>>
     <associate|AX11|<tuple|3.11|27>>
@@ -6672,98 +6786,118 @@
     <associate|AX9|<tuple|3.9|25>>
     <associate|aris-dt4|<tuple|3.18|37>>
     <associate|aris-dt4-latex|<tuple|3.19|38>>
-    <associate|aris-godel1-latex|<tuple|4.19|73>>
+    <associate|aris-godel1-latex|<tuple|4.19|75>>
     <associate|aris-keyb|<tuple|3.15|35>>
     <associate|aris-mp|<tuple|3.12|34>>
     <associate|aris-mp2|<tuple|3.13|34>>
     <associate|aris-mp3|<tuple|3.14|35>>
     <associate|aris-pimplp|<tuple|3.17|36>>
     <associate|aris-rules|<tuple|3.16|36>>
+    <associate|aris-web|<tuple|3.6.4|?>>
+    <associate|aris-web-1|<tuple|3.20|39>>
+    <associate|aris-web-2|<tuple|3.21|39>>
+    <associate|aris-web-3|<tuple|3.22|39>>
+    <associate|aris-web-4|<tuple|3.23|40>>
+    <associate|aris-web-5|<tuple|3.24|40>>
+    <associate|aris-web-6|<tuple|3.25|40>>
+    <associate|aris-web-7|<tuple|3.26|40>>
+    <associate|aris-web-8|<tuple|3.27|41>>
+    <associate|aris-web-9|<tuple|3.28|41>>
     <associate|auto-1|<tuple|1|5>>
     <associate|auto-10|<tuple|3.1|12>>
-    <associate|auto-100|<tuple|Logik|45>>
-    <associate|auto-101|<tuple|4.1|45>>
-    <associate|auto-102|<tuple|4.1.1|45>>
-    <associate|auto-103|<tuple|4.1.2|46>>
-    <associate|auto-104|<tuple|4.1.3|46>>
-    <associate|auto-105|<tuple|GeoGebra Discovery|46>>
-    <associate|auto-106|<tuple|4.2|47>>
-    <associate|auto-107|<tuple|4.3|47>>
-    <associate|auto-108|<tuple|4.3.1|48>>
-    <associate|auto-109|<tuple|4.4|49>>
-    <associate|auto-110|<tuple|reelle Quantorenelimination|49>>
-    <associate|auto-111|<tuple|4.4.1|50>>
-    <associate|auto-112|<tuple|4.5|51>>
-    <associate|auto-113|<tuple|Pränexform|51>>
-    <associate|auto-114|<tuple|4.5.1|52>>
-    <associate|auto-115|<tuple|4.6|53>>
-    <associate|auto-116|<tuple|4.1|54>>
-    <associate|auto-117|<tuple|4.2|55>>
-    <associate|auto-118|<tuple|4.3|55>>
-    <associate|auto-119|<tuple|4.4|56>>
+    <associate|auto-100|<tuple|3.7.1|42>>
+    <associate|auto-101|<tuple|3.7.2|42>>
+    <associate|auto-102|<tuple|3.7.3|43>>
+    <associate|auto-103|<tuple|3.7.4|43>>
+    <associate|auto-104|<tuple|DIMACS|44>>
+    <associate|auto-105|<tuple|DIMACS-CNF|44>>
+    <associate|auto-106|<tuple|Minisat|45>>
+    <associate|auto-107|<tuple|3.7.5|46>>
+    <associate|auto-108|<tuple|4|47>>
+    <associate|auto-109|<tuple|Logik|47>>
+    <associate|auto-110|<tuple|Logik|47>>
+    <associate|auto-111|<tuple|4.1|47>>
+    <associate|auto-112|<tuple|4.1.1|47>>
+    <associate|auto-113|<tuple|4.1.2|48>>
+    <associate|auto-114|<tuple|4.1.3|48>>
+    <associate|auto-115|<tuple|GeoGebra Discovery|48>>
+    <associate|auto-116|<tuple|4.2|49>>
+    <associate|auto-117|<tuple|4.3|49>>
+    <associate|auto-118|<tuple|4.3.1|50>>
+    <associate|auto-119|<tuple|4.4|51>>
     <associate|auto-12|<tuple|Wahrheitstafel|12>>
-    <associate|auto-120|<tuple|4.5|56>>
-    <associate|auto-121|<tuple|4.6.1|58>>
-    <associate|auto-122|<tuple|4.7|58>>
-    <associate|auto-123|<tuple|4.6|58>>
-    <associate|auto-124|<tuple|4.7|59>>
-    <associate|auto-125|<tuple|4.8|59>>
-    <associate|auto-126|<tuple|4.7.1|60>>
-    <associate|auto-127|<tuple|Bachet-Spiel|60>>
-    <associate|auto-128|<tuple|4.7.2|60>>
-    <associate|auto-129|<tuple|4.7.3|60>>
+    <associate|auto-120|<tuple|reelle Quantorenelimination|51>>
+    <associate|auto-121|<tuple|4.4.1|52>>
+    <associate|auto-122|<tuple|4.5|53>>
+    <associate|auto-123|<tuple|Pränexform|53>>
+    <associate|auto-124|<tuple|4.5.1|54>>
+    <associate|auto-125|<tuple|4.6|55>>
+    <associate|auto-126|<tuple|4.1|56>>
+    <associate|auto-127|<tuple|4.2|57>>
+    <associate|auto-128|<tuple|4.3|57>>
+    <associate|auto-129|<tuple|4.4|58>>
     <associate|auto-13|<tuple|3.2|12>>
-    <associate|auto-130|<tuple|4.9|61>>
-    <associate|auto-131|<tuple|4.10|61>>
-    <associate|auto-132|<tuple|4.11|61>>
-    <associate|auto-133|<tuple|4.12|62>>
-    <associate|auto-134|<tuple|4.13|62>>
-    <associate|auto-135|<tuple|4.8|63>>
-    <associate|auto-136|<tuple|CAD|63>>
-    <associate|auto-137|<tuple|CAD|63>>
-    <associate|auto-138|<tuple|4.14|63>>
-    <associate|auto-139|<tuple|4.15|64>>
+    <associate|auto-130|<tuple|4.5|58>>
+    <associate|auto-131|<tuple|4.6.1|60>>
+    <associate|auto-132|<tuple|4.7|60>>
+    <associate|auto-133|<tuple|4.6|60>>
+    <associate|auto-134|<tuple|4.7|61>>
+    <associate|auto-135|<tuple|4.8|61>>
+    <associate|auto-136|<tuple|4.7.1|62>>
+    <associate|auto-137|<tuple|Bachet-Spiel|62>>
+    <associate|auto-138|<tuple|4.7.2|62>>
+    <associate|auto-139|<tuple|4.7.3|62>>
     <associate|auto-14|<tuple|Wolfram\|Alpha|13>>
-    <associate|auto-140|<tuple|4.16|65>>
-    <associate|auto-141|<tuple|4.17|66>>
-    <associate|auto-142|<tuple|Tarski\USeidenberg-Theorem|67>>
-    <associate|auto-143|<tuple|4.8.1|67>>
-    <associate|auto-144|<tuple|4.18|67>>
-    <associate|auto-145|<tuple|4.9|68>>
-    <associate|auto-146|<tuple|4.9.1|69>>
-    <associate|auto-147|<tuple|4.9.2|69>>
-    <associate|auto-148|<tuple|4.9.3|71>>
-    <associate|auto-149|<tuple|4.10|71>>
+    <associate|auto-140|<tuple|4.9|63>>
+    <associate|auto-141|<tuple|4.10|63>>
+    <associate|auto-142|<tuple|4.11|63>>
+    <associate|auto-143|<tuple|4.12|64>>
+    <associate|auto-144|<tuple|4.13|64>>
+    <associate|auto-145|<tuple|4.8|65>>
+    <associate|auto-146|<tuple|CAD|65>>
+    <associate|auto-147|<tuple|CAD|65>>
+    <associate|auto-148|<tuple|4.14|65>>
+    <associate|auto-149|<tuple|4.15|66>>
     <associate|auto-15|<tuple|DNF|13>>
-    <associate|auto-150|<tuple|Gödelscher Vollständigkeitssatz|73>>
-    <associate|auto-151|<tuple|4.10.1|73>>
-    <associate|auto-152|<tuple|4.19|73>>
-    <associate|auto-153|<tuple|5|75>>
-    <associate|auto-154|<tuple|5.1|75>>
-    <associate|auto-155|<tuple|Vier-Farben-Satz|75>>
-    <associate|auto-156|<tuple|Coq|76>>
-    <associate|auto-157|<tuple|Keplersche Vermutung|76>>
-    <associate|auto-158|<tuple|HOL Light|76>>
-    <associate|auto-159|<tuple|Isabelle|76>>
+    <associate|auto-150|<tuple|4.16|67>>
+    <associate|auto-151|<tuple|4.17|68>>
+    <associate|auto-152|<tuple|Tarski\USeidenberg-Theorem|68>>
+    <associate|auto-153|<tuple|4.8.1|69>>
+    <associate|auto-154|<tuple|4.18|69>>
+    <associate|auto-155|<tuple|4.9|69>>
+    <associate|auto-156|<tuple|4.9.1|71>>
+    <associate|auto-157|<tuple|4.9.2|71>>
+    <associate|auto-158|<tuple|4.9.3|73>>
+    <associate|auto-159|<tuple|4.10|73>>
     <associate|auto-16|<tuple|DNF|13>>
-    <associate|auto-160|<tuple|5.1|77>>
-    <associate|auto-161|<tuple|LEAN|77>>
-    <associate|auto-162|<tuple|5.1.1|77>>
-    <associate|auto-163|<tuple|5.2|77>>
-    <associate|auto-164|<tuple|Gödelscher Unvollständigkeitssatz|78>>
-    <associate|auto-165|<tuple|5.2.1|78>>
-    <associate|auto-166|<tuple|5.3|79>>
-    <associate|auto-167|<tuple|Modallogik|81>>
-    <associate|auto-168|<tuple|5.3.1|81>>
-    <associate|auto-169|<tuple|5.3.1|81>>
+    <associate|auto-160|<tuple|Gödelscher Vollständigkeitssatz|75>>
+    <associate|auto-161|<tuple|4.10.1|75>>
+    <associate|auto-162|<tuple|4.19|75>>
+    <associate|auto-163|<tuple|5|77>>
+    <associate|auto-164|<tuple|5.1|77>>
+    <associate|auto-165|<tuple|Vier-Farben-Satz|77>>
+    <associate|auto-166|<tuple|Coq|78>>
+    <associate|auto-167|<tuple|Keplersche Vermutung|78>>
+    <associate|auto-168|<tuple|HOL Light|78>>
+    <associate|auto-169|<tuple|Isabelle|78>>
     <associate|auto-17|<tuple|CNF|13>>
-    <associate|auto-170|<tuple|<with|mode|<quote|math>|\<bullet\>>|82>>
-    <associate|auto-171|<tuple|5.3.2|83>>
-    <associate|auto-172|<tuple|6|85>>
-    <associate|auto-173|<tuple|6|87>>
-    <associate|auto-174|<tuple|26|89>>
-    <associate|auto-175|<tuple|26|91>>
+    <associate|auto-170|<tuple|5.1|79>>
+    <associate|auto-171|<tuple|LEAN|79>>
+    <associate|auto-172|<tuple|5.1.1|79>>
+    <associate|auto-173|<tuple|5.2|79>>
+    <associate|auto-174|<tuple|Gödelscher Unvollständigkeitssatz|80>>
+    <associate|auto-175|<tuple|5.2.1|80>>
+    <associate|auto-176|<tuple|5.3|81>>
+    <associate|auto-177|<tuple|Modallogik|83>>
+    <associate|auto-178|<tuple|5.3.1|83>>
+    <associate|auto-179|<tuple|5.3.1|83>>
     <associate|auto-18|<tuple|CNF|13>>
+    <associate|auto-180|<tuple|<with|mode|<quote|math>|\<bullet\>>|84>>
+    <associate|auto-181|<tuple|5.3.2|85>>
+    <associate|auto-182|<tuple|6|87>>
+    <associate|auto-183|<tuple|6|89>>
+    <associate|auto-184|<tuple|26|91>>
+    <associate|auto-185|<tuple|26|93>>
     <associate|auto-19|<tuple|Mathematica|13>>
     <associate|auto-2|<tuple|2|7>>
     <associate|auto-20|<tuple|3.1.1|13>>
@@ -6839,97 +6973,97 @@
     <associate|auto-84|<tuple|PDF|38>>
     <associate|auto-85|<tuple|3.19|38>>
     <associate|auto-86|<tuple|3.6.3|39>>
-    <associate|auto-87|<tuple|3.7|39>>
-    <associate|auto-88|<tuple|SAT-Solver|39>>
-    <associate|auto-89|<tuple|WolframScript|39>>
+    <associate|auto-87|<tuple|3.6.4|39>>
+    <associate|auto-88|<tuple|3.20|39>>
+    <associate|auto-89|<tuple|3.21|39>>
     <associate|auto-9|<tuple|Fallunterscheidung|11>>
-    <associate|auto-90|<tuple|3.7.1|39>>
-    <associate|auto-91|<tuple|3.7.2|40>>
-    <associate|auto-92|<tuple|3.7.3|41>>
-    <associate|auto-93|<tuple|3.7.4|41>>
-    <associate|auto-94|<tuple|DIMACS|41>>
-    <associate|auto-95|<tuple|DIMACS-CNF|41>>
-    <associate|auto-96|<tuple|Minisat|43>>
-    <associate|auto-97|<tuple|3.7.5|43>>
-    <associate|auto-98|<tuple|4|45>>
-    <associate|auto-99|<tuple|Logik|45>>
-    <associate|bib-AppelHaken77|<tuple|1|87>>
-    <associate|bib-Arnon1981|<tuple|2|87>>
-    <associate|bib-Chou_1987|<tuple|7|87>>
-    <associate|bib-Collins1975|<tuple|8|87>>
-    <associate|bib-Elberfelder|<tuple|3|87>>
-    <associate|bib-Gonthier2008|<tuple|11|87>>
-    <associate|bib-Hales2015|<tuple|12|87>>
-    <associate|bib-Lutherbibel|<tuple|15|87>>
-    <associate|bib-Pillichshammer2022|<tuple|16|87>>
-    <associate|bib-Pillichshammer2022-ZT|<tuple|17|87>>
-    <associate|bib-RISC3848|<tuple|24|87>>
-    <associate|bib-RISC5887|<tuple|6|87>>
-    <associate|bib-RISC5936|<tuple|5|87>>
-    <associate|bib-RS-DT|<tuple|21|87>>
-    <associate|bib-RS-WB|<tuple|20|87>>
-    <associate|bib-Robertson1997|<tuple|18|87>>
-    <associate|bib-Sturm1999|<tuple|22|87>>
-    <associate|bib-Tarski1983|<tuple|19|87>>
-    <associate|bib-ValeEnriquez-Brown|<tuple|25|87>>
-    <associate|bib-Wasilewska2021|<tuple|26|87>>
-    <associate|bib-aris|<tuple|9|87>>
-    <associate|bib-buchbergerPhd|<tuple|4|87>>
-    <associate|bib-checkmate|<tuple|13|87>>
-    <associate|bib-gdm|<tuple|14|87>>
-    <associate|bib-minisat|<tuple|10|87>>
-    <associate|bib-tarski51|<tuple|23|87>>
-    <associate|cad1|<tuple|4.14|63>>
-    <associate|cad2|<tuple|4.15|64>>
-    <associate|cad3|<tuple|4.16|65>>
-    <associate|cad4|<tuple|4.17|66>>
-    <associate|cad56|<tuple|4.18|67>>
-    <associate|chess1|<tuple|4.6|58>>
-    <associate|chess2|<tuple|4.7|59>>
-    <associate|chess2b|<tuple|4.8|59>>
-    <associate|chess3|<tuple|4.9|61>>
-    <associate|chess4|<tuple|4.10|61>>
-    <associate|chess5|<tuple|4.11|61>>
-    <associate|chess6|<tuple|4.12|62>>
-    <associate|chess7|<tuple|4.13|62>>
-    <associate|cnf|<tuple|3.7|41>>
-    <associate|e1|<tuple|4.13|70>>
-    <associate|e2|<tuple|4.14|70>>
-    <associate|e3|<tuple|4.15|70>>
-    <associate|e4|<tuple|4.16|70>>
-    <associate|e5|<tuple|4.17|70>>
-    <associate|e6|<tuple|4.18|70>>
-    <associate|e8|<tuple|4.19|70>>
-    <associate|f1|<tuple|4.20|70>>
-    <associate|f2|<tuple|4.21|70>>
-    <associate|f3|<tuple|4.22|70>>
-    <associate|f4|<tuple|4.23|70>>
-    <associate|f5|<tuple|4.24|70>>
-    <associate|f6|<tuple|4.25|70>>
-    <associate|f8|<tuple|4.26|70>>
+    <associate|auto-90|<tuple|3.22|39>>
+    <associate|auto-91|<tuple|3.23|40>>
+    <associate|auto-92|<tuple|3.24|40>>
+    <associate|auto-93|<tuple|3.25|40>>
+    <associate|auto-94|<tuple|3.26|40>>
+    <associate|auto-95|<tuple|3.27|41>>
+    <associate|auto-96|<tuple|3.28|41>>
+    <associate|auto-97|<tuple|3.7|41>>
+    <associate|auto-98|<tuple|SAT-Solver|41>>
+    <associate|auto-99|<tuple|WolframScript|41>>
+    <associate|bib-AppelHaken77|<tuple|1|89>>
+    <associate|bib-Arnon1981|<tuple|2|89>>
+    <associate|bib-Chou_1987|<tuple|7|89>>
+    <associate|bib-Collins1975|<tuple|8|89>>
+    <associate|bib-Elberfelder|<tuple|3|89>>
+    <associate|bib-Gonthier2008|<tuple|11|89>>
+    <associate|bib-Hales2015|<tuple|12|89>>
+    <associate|bib-Lutherbibel|<tuple|15|89>>
+    <associate|bib-Pillichshammer2022|<tuple|16|89>>
+    <associate|bib-Pillichshammer2022-ZT|<tuple|17|89>>
+    <associate|bib-RISC3848|<tuple|24|89>>
+    <associate|bib-RISC5887|<tuple|6|89>>
+    <associate|bib-RISC5936|<tuple|5|89>>
+    <associate|bib-RS-DT|<tuple|21|89>>
+    <associate|bib-RS-WB|<tuple|20|89>>
+    <associate|bib-Robertson1997|<tuple|18|89>>
+    <associate|bib-Sturm1999|<tuple|22|89>>
+    <associate|bib-Tarski1983|<tuple|19|89>>
+    <associate|bib-ValeEnriquez-Brown|<tuple|25|89>>
+    <associate|bib-Wasilewska2021|<tuple|26|89>>
+    <associate|bib-aris|<tuple|9|89>>
+    <associate|bib-buchbergerPhd|<tuple|4|89>>
+    <associate|bib-checkmate|<tuple|13|89>>
+    <associate|bib-gdm|<tuple|14|89>>
+    <associate|bib-minisat|<tuple|10|89>>
+    <associate|bib-tarski51|<tuple|23|89>>
+    <associate|cad1|<tuple|4.14|65>>
+    <associate|cad2|<tuple|4.15|66>>
+    <associate|cad3|<tuple|4.16|67>>
+    <associate|cad4|<tuple|4.17|68>>
+    <associate|cad56|<tuple|4.18|69>>
+    <associate|chess1|<tuple|4.6|60>>
+    <associate|chess2|<tuple|4.7|61>>
+    <associate|chess2b|<tuple|4.8|61>>
+    <associate|chess3|<tuple|4.9|63>>
+    <associate|chess4|<tuple|4.10|63>>
+    <associate|chess5|<tuple|4.11|63>>
+    <associate|chess6|<tuple|4.12|64>>
+    <associate|chess7|<tuple|4.13|64>>
+    <associate|cnf|<tuple|3.7|44>>
+    <associate|e1|<tuple|4.13|71>>
+    <associate|e2|<tuple|4.14|71>>
+    <associate|e3|<tuple|4.15|71>>
+    <associate|e4|<tuple|4.16|71>>
+    <associate|e5|<tuple|4.17|71>>
+    <associate|e6|<tuple|4.18|72>>
+    <associate|e8|<tuple|4.19|72>>
+    <associate|f1|<tuple|4.20|72>>
+    <associate|f2|<tuple|4.21|72>>
+    <associate|f3|<tuple|4.22|72>>
+    <associate|f4|<tuple|4.23|72>>
+    <associate|f5|<tuple|4.24|72>>
+    <associate|f6|<tuple|4.25|72>>
+    <associate|f8|<tuple|4.26|72>>
     <associate|footnote-3.1|<tuple|3.1|13>>
     <associate|footnote-3.2|<tuple|3.2|33>>
-    <associate|footnote-5.1|<tuple|5.1|81>>
+    <associate|footnote-5.1|<tuple|5.1|83>>
     <associate|footnr-3.1|<tuple|3.1|13>>
     <associate|footnr-3.2|<tuple|3.2|33>>
-    <associate|footnr-5.1|<tuple|5.1|81>>
-    <associate|limes1|<tuple|4.1|54>>
-    <associate|limes2|<tuple|4.2|55>>
-    <associate|limes3|<tuple|4.3|55>>
-    <associate|limes4b|<tuple|4.4|56>>
-    <associate|limes5b|<tuple|4.5|56>>
-    <associate|limit|<tuple|4.12|54>>
-    <associate|line1|<tuple|4.6|50>>
-    <associate|line2|<tuple|4.7|50>>
-    <associate|line3|<tuple|4.8|50>>
-    <associate|no-limit|<tuple|4.11|53>>
-    <associate|pred|<tuple|4.1|45>>
-    <associate|pred2|<tuple|4.2|47>>
-    <associate|pred3|<tuple|4.3|47>>
-    <associate|prenex|<tuple|4.9|51>>
-    <associate|quadr|<tuple|4.5|49>>
+    <associate|footnr-5.1|<tuple|5.1|83>>
+    <associate|limes1|<tuple|4.1|56>>
+    <associate|limes2|<tuple|4.2|57>>
+    <associate|limes3|<tuple|4.3|57>>
+    <associate|limes4b|<tuple|4.4|58>>
+    <associate|limes5b|<tuple|4.5|58>>
+    <associate|limit|<tuple|4.12|56>>
+    <associate|line1|<tuple|4.6|52>>
+    <associate|line2|<tuple|4.7|52>>
+    <associate|line3|<tuple|4.8|52>>
+    <associate|no-limit|<tuple|4.11|55>>
+    <associate|pred|<tuple|4.1|47>>
+    <associate|pred2|<tuple|4.2|49>>
+    <associate|pred3|<tuple|4.3|49>>
+    <associate|prenex|<tuple|4.9|53>>
+    <associate|quadr|<tuple|4.5|51>>
     <associate|rah-fel|<tuple|3.1|11>>
-    <associate|twin|<tuple|4.4|48>>
+    <associate|twin|<tuple|4.4|50>>
   </collection>
 </references>
 
@@ -7005,8 +7139,6 @@
       gdm
 
       checkmate
-
-      ValeEnriquez-Brown
 
       Collins1975
 
@@ -7113,98 +7245,125 @@
         \;
       </surround>|<pageref|auto-85>>
 
+      <tuple|normal|<\surround|<hidden-binding|<tuple>|3.20>|>
+        \;
+      </surround>|<pageref|auto-88>>
+
+      <tuple|normal|<\surround|<hidden-binding|<tuple>|3.21>|>
+        \;
+      </surround>|<pageref|auto-89>>
+
+      <tuple|normal|<\surround|<hidden-binding|<tuple>|3.22>|>
+        \;
+      </surround>|<pageref|auto-90>>
+
+      <tuple|normal|<\surround|<hidden-binding|<tuple>|3.23>|>
+        \;
+      </surround>|<pageref|auto-91>>
+
+      <tuple|normal|<\surround|<hidden-binding|<tuple>|3.24>|>
+        \;
+      </surround>|<pageref|auto-92>>
+
+      <tuple|normal|<\surround|<hidden-binding|<tuple>|3.25>|>
+        \;
+      </surround>|<pageref|auto-93>>
+
+      <tuple|normal|<\surround|<hidden-binding|<tuple>|3.26>|>
+        \;
+      </surround>|<pageref|auto-94>>
+
+      <tuple|normal|<\surround|<hidden-binding|<tuple>|3.27>|>
+        \;
+      </surround>|<pageref|auto-95>>
+
+      <tuple|normal|<\surround|<hidden-binding|<tuple>|3.28>|>
+        \;
+      </surround>|<pageref|auto-96>>
+
       <tuple|normal|<\surround|<hidden-binding|<tuple>|4.1>|>
         \;
-      </surround>|<pageref|auto-116>>
+      </surround>|<pageref|auto-126>>
 
       <tuple|normal|<\surround|<hidden-binding|<tuple>|4.2>|>
         \;
-      </surround>|<pageref|auto-117>>
+      </surround>|<pageref|auto-127>>
 
       <tuple|normal|<\surround|<hidden-binding|<tuple>|4.3>|>
         \;
-      </surround>|<pageref|auto-118>>
+      </surround>|<pageref|auto-128>>
 
       <tuple|normal|<\surround|<hidden-binding|<tuple>|4.4>|>
         \;
-      </surround>|<pageref|auto-119>>
+      </surround>|<pageref|auto-129>>
 
       <tuple|normal|<\surround|<hidden-binding|<tuple>|4.5>|>
         \;
-      </surround>|<pageref|auto-120>>
+      </surround>|<pageref|auto-130>>
 
       <tuple|normal|<\surround|<hidden-binding|<tuple>|4.6>|>
         \;
-      </surround>|<pageref|auto-123>>
+      </surround>|<pageref|auto-133>>
 
       <tuple|normal|<\surround|<hidden-binding|<tuple>|4.7>|>
         \;
-      </surround>|<pageref|auto-124>>
+      </surround>|<pageref|auto-134>>
 
       <tuple|normal|<\surround|<hidden-binding|<tuple>|4.8>|>
         \;
-      </surround>|<pageref|auto-125>>
+      </surround>|<pageref|auto-135>>
 
       <tuple|normal|<\surround|<hidden-binding|<tuple>|4.9>|>
         \;
-      </surround>|<pageref|auto-130>>
+      </surround>|<pageref|auto-140>>
 
       <tuple|normal|<\surround|<hidden-binding|<tuple>|4.10>|>
         \;
-      </surround>|<pageref|auto-131>>
+      </surround>|<pageref|auto-141>>
 
       <tuple|normal|<\surround|<hidden-binding|<tuple>|4.11>|>
         \;
-      </surround>|<pageref|auto-132>>
+      </surround>|<pageref|auto-142>>
 
       <tuple|normal|<\surround|<hidden-binding|<tuple>|4.12>|>
         \;
-      </surround>|<pageref|auto-133>>
+      </surround>|<pageref|auto-143>>
 
       <tuple|normal|<\surround|<hidden-binding|<tuple>|4.13>|>
         \;
-      </surround>|<pageref|auto-134>>
+      </surround>|<pageref|auto-144>>
 
       <tuple|normal|<\surround|<hidden-binding|<tuple>|4.14>|>
         \;
-      </surround>|<pageref|auto-138>>
+      </surround>|<pageref|auto-148>>
 
       <tuple|normal|<\surround|<hidden-binding|<tuple>|4.15>|>
         \;
-      </surround>|<pageref|auto-139>>
+      </surround>|<pageref|auto-149>>
 
       <tuple|normal|<\surround|<hidden-binding|<tuple>|4.16>|>
-        Ausgabe des <with|font-shape|<quote|small-caps>|Tarski>-Programms für
-        die Eingabe <with|font-family|<quote|tt>|language|<quote|verbatim>|(plot2d
-        [x\<less\>y^2] "400 400 -5 5 -5 5 -")>. Hier ist \R400 400\P die
-        Gröÿe der Ausgabe, und die folgenden Zahlen sind die minimalen und
-        maximalen <with|mode|<quote|math>|x>- und
-        <with|mode|<quote|math>|y>-Koordinaten. Das Programm kann unter
-        <locus|<id|%-4E6633268--4E5B620B8>|<link|hyperlink|<id|%-4E6633268--4E5B620B8>|<url|https://matek.hu/tarski/webtarski.html>>|<with|font-family|<quote|tt>|language|<quote|verbatim>|https://matek.hu/tarski/webtarski.html>>
-        getestet werden.
-      </surround>|<pageref|auto-140>>
+        Ausgabe von GeoGebra Discovery für die Eingabe
+        <with|font-family|<quote|tt>|language|<quote|verbatim>|Zeichne2D(x\<less\>y^2,"x")>.
+      </surround>|<pageref|auto-150>>
 
       <tuple|normal|<\surround|<hidden-binding|<tuple>|4.17>|>
-        Eine Version der Ausgabe des <with|font-shape|<quote|small-caps>|Tarski>-Programms,
-        gespiegelt an der Geraden <with|mode|<quote|math>|y=x>, erzeugt durch
-        die Eingabe <with|font-family|<quote|tt>|language|<quote|verbatim>|(plot2d
-        [y\<gtr\>0 /\\ x^2=(x+y)^2] "400 400 -5 5 -5 5 -" '(ord (y x)))>.
-        Hier gibt das Ende des Befehls an, dass das Slicing \Rin umgekehrter
-        Richtung\P zur Standardeinstellung erfolgen soll.
-      </surround>|<pageref|auto-141>>
+        Ausgabe von GeoGebra Discovery, erzeugt durch die Eingabe
+        <with|font-family|<quote|tt>|language|<quote|verbatim>|Zeichne2D(y\<gtr\>0
+        && x^2==(x+y)^2, "y")>.
+      </surround>|<pageref|auto-151>>
 
       <tuple|normal|<\surround|<hidden-binding|<tuple>|4.18>|>
         \;
-      </surround>|<pageref|auto-144>>
+      </surround>|<pageref|auto-154>>
 
       <tuple|normal|<\surround|<hidden-binding|<tuple>|4.19>|>
         \;
-      </surround>|<pageref|auto-152>>
+      </surround>|<pageref|auto-162>>
 
       <tuple|normal|<\surround|<hidden-binding|<tuple>|5.1>|>
         Jährliche Statistiken über die Zahl der Veröffentlichungen in der
-        Mathematik, 1996\U2014. Quelle: <locus|<id|%-4E6633268--4E5B35E38>|<link|hyperlink|<id|%-4E6633268--4E5B35E38>|<url|https://mathoverflow.net/questions/233984/how-many-papers-are-posted-a-year>>|<with|font-family|<quote|tt>|language|<quote|verbatim>|https://mathoverflow.net/questions/233984/how-many-papers-are-posted-a-year>>.
-      </surround>|<pageref|auto-160>>
+        Mathematik, 1996\U2014. Quelle: <locus|<id|%58FE270F8-5908F4530>|<link|hyperlink|<id|%58FE270F8-5908F4530>|<url|https://mathoverflow.net/questions/233984/how-many-papers-are-posted-a-year>>|<with|font-family|<quote|tt>|language|<quote|verbatim>|https://mathoverflow.net/questions/233984/how-many-papers-are-posted-a-year>>.
+      </surround>|<pageref|auto-170>>
     </associate>
     <\associate|gly>
       <tuple|normal|DNF|disjunktive Normalform|<pageref|auto-16>>
@@ -7216,10 +7375,10 @@
       <tuple|normal|PDF|Portable Document Format|<pageref|auto-84>>
 
       <tuple|normal|DIMACS|Center for Discrete Mathematics and Theoretical
-      Computer Science|<pageref|auto-94>>
+      Computer Science|<pageref|auto-104>>
 
       <tuple|normal|CAD|Cylindrical Algebraic
-      Decomposition|<pageref|auto-136>>
+      Decomposition|<pageref|auto-146>>
     </associate>
     <\associate|idx>
       <tuple|<tuple|Fallunterscheidung>|<pageref|auto-9>>
@@ -7266,47 +7425,47 @@
 
       <tuple|<tuple|L<rsup|<space|-0.8spc><move|A|0fn|-0.1fn>><space|-0.2spc>T<rsub|<space|-0.4spc><move|<resize|<with|math-level|<quote|0>|E>||||0.5fn>|0fn|-0.1fn>><space|-0.4spc>X>|<pageref|auto-83>>
 
-      <tuple|<tuple|SAT-Solver>|<pageref|auto-88>>
+      <tuple|<tuple|SAT-Solver>|<pageref|auto-98>>
 
-      <tuple|<tuple|WolframScript>|<pageref|auto-89>>
+      <tuple|<tuple|WolframScript>|<pageref|auto-99>>
 
-      <tuple|<tuple|DIMACS-CNF>|<pageref|auto-95>>
+      <tuple|<tuple|DIMACS-CNF>|<pageref|auto-105>>
 
-      <tuple|<tuple|Minisat>|<pageref|auto-96>>
+      <tuple|<tuple|Minisat>|<pageref|auto-106>>
 
-      <tuple|<tuple|Logik|nullter Stufe>|<pageref|auto-99>>
+      <tuple|<tuple|Logik|nullter Stufe>|<pageref|auto-109>>
 
-      <tuple|<tuple|Logik|erster Stufe>|<pageref|auto-100>>
+      <tuple|<tuple|Logik|erster Stufe>|<pageref|auto-110>>
 
-      <tuple|<tuple|GeoGebra Discovery>|<pageref|auto-105>>
+      <tuple|<tuple|GeoGebra Discovery>|<pageref|auto-115>>
 
-      <tuple|<tuple|reelle Quantorenelimination>|<pageref|auto-110>>
+      <tuple|<tuple|reelle Quantorenelimination>|<pageref|auto-120>>
 
-      <tuple|<tuple|Pränexform>|<pageref|auto-113>>
+      <tuple|<tuple|Pränexform>|<pageref|auto-123>>
 
-      <tuple|<tuple|Bachet-Spiel>|<pageref|auto-127>>
+      <tuple|<tuple|Bachet-Spiel>|<pageref|auto-137>>
 
-      <tuple|<tuple|CAD>|<pageref|auto-137>>
+      <tuple|<tuple|CAD>|<pageref|auto-147>>
 
-      <tuple|<tuple|Tarski\USeidenberg-Theorem>|<pageref|auto-142>>
+      <tuple|<tuple|Tarski\USeidenberg-Theorem>|<pageref|auto-152>>
 
-      <tuple|<tuple|Gödelscher Vollständigkeitssatz>|<pageref|auto-150>>
+      <tuple|<tuple|Gödelscher Vollständigkeitssatz>|<pageref|auto-160>>
 
-      <tuple|<tuple|Vier-Farben-Satz>|<pageref|auto-155>>
+      <tuple|<tuple|Vier-Farben-Satz>|<pageref|auto-165>>
 
-      <tuple|<tuple|Coq>|<pageref|auto-156>>
+      <tuple|<tuple|Coq>|<pageref|auto-166>>
 
-      <tuple|<tuple|Keplersche Vermutung>|<pageref|auto-157>>
+      <tuple|<tuple|Keplersche Vermutung>|<pageref|auto-167>>
 
-      <tuple|<tuple|HOL Light>|<pageref|auto-158>>
+      <tuple|<tuple|HOL Light>|<pageref|auto-168>>
 
-      <tuple|<tuple|Isabelle>|<pageref|auto-159>>
+      <tuple|<tuple|Isabelle>|<pageref|auto-169>>
 
-      <tuple|<tuple|LEAN>|<pageref|auto-161>>
+      <tuple|<tuple|LEAN>|<pageref|auto-171>>
 
-      <tuple|<tuple|Gödelscher Unvollständigkeitssatz>|<pageref|auto-164>>
+      <tuple|<tuple|Gödelscher Unvollständigkeitssatz>|<pageref|auto-174>>
 
-      <tuple|<tuple|Modallogik>|<pageref|auto-167>>
+      <tuple|<tuple|Modallogik>|<pageref|auto-177>>
     </associate>
     <\associate|table>
       <tuple|normal|<\surround|<hidden-binding|<tuple>|3.1>|>
@@ -7469,180 +7628,184 @@
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-86>>
 
+      <with|par-left|<quote|1tab>|3.6.4.<space|2spc>GNU Aris Web-Version
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-87>>
+
       3.7.<space|2spc>SAT-solver <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-87>
+      <no-break><pageref|auto-97>
 
       <with|par-left|<quote|1tab>|3.7.1.<space|2spc>Wir formalisieren das
       logische Labyrinth <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-90>>
+      <no-break><pageref|auto-100>>
 
       <with|par-left|<quote|1tab>|3.7.2.<space|2spc>Die Mathematica-Formel
       und ihre Analyse <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-91>>
+      <no-break><pageref|auto-101>>
 
       <with|par-left|<quote|1tab>|3.7.3.<space|2spc>Aufgaben zur
       Formalisierung <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-92>>
+      <no-break><pageref|auto-102>>
 
       <with|par-left|<quote|1tab>|3.7.4.<space|2spc>Erfüllbarkeit
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-93>>
+      <no-break><pageref|auto-103>>
 
       <with|par-left|<quote|1tab>|3.7.5.<space|2spc>Aufgaben
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-97>>
+      <no-break><pageref|auto-107>>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|font-shape|<quote|small-caps>|4.<space|2spc>Prädikatenlogik>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <pageref|auto-98><vspace|0.5fn>
+      <pageref|auto-108><vspace|0.5fn>
 
       4.1.<space|2spc>Syntax <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-101>
+      <no-break><pageref|auto-111>
 
       <with|par-left|<quote|1tab>|4.1.1.<space|2spc>Die Schreibweise in Aris
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-102>>
+      <no-break><pageref|auto-112>>
 
       <with|par-left|<quote|1tab>|4.1.2.<space|2spc>Die Schreibweise in
       Mathematica <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-103>>
+      <no-break><pageref|auto-113>>
 
       <with|par-left|<quote|1tab>|4.1.3.<space|2spc>Die Schreibweise in
       GeoGebra <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-104>>
+      <no-break><pageref|auto-114>>
 
       4.2.<space|2spc>Operationen <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-106>
+      <no-break><pageref|auto-116>
 
       4.3.<space|2spc>Die Grundmenge <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-107>
+      <no-break><pageref|auto-117>
 
       <with|par-left|<quote|1tab>|4.3.1.<space|2spc>Aufgaben
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-108>>
+      <no-break><pageref|auto-118>>
 
       4.4.<space|2spc>Reelle Quantorenelimination
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-109>
+      <no-break><pageref|auto-119>
 
       <with|par-left|<quote|1tab>|4.4.1.<space|2spc>Aufgaben
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-111>>
+      <no-break><pageref|auto-121>>
 
       4.5.<space|2spc>Pränexforme <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-112>
+      <no-break><pageref|auto-122>
 
       <with|par-left|<quote|1tab>|4.5.1.<space|2spc>Aufgaben
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-114>>
+      <no-break><pageref|auto-124>>
 
       4.6.<space|2spc>Suchen nach Gewinnstrategie
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-115>
+      <no-break><pageref|auto-125>
 
       <with|par-left|<quote|1tab>|4.6.1.<space|2spc>Aufgaben
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-121>>
+      <no-break><pageref|auto-131>>
 
       4.7.<space|2spc>Schach und Matt! <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-122>
+      <no-break><pageref|auto-132>
 
       <with|par-left|<quote|1tab>|4.7.1.<space|2spc>Alternative: Das
       Bachet-Spiel <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-126>>
+      <no-break><pageref|auto-136>>
 
       <with|par-left|<quote|1tab>|4.7.2.<space|2spc>Anwendungen
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-128>>
+      <no-break><pageref|auto-138>>
 
       <with|par-left|<quote|1tab>|4.7.3.<space|2spc>Aufgaben
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-129>>
+      <no-break><pageref|auto-139>>
 
       4.8.<space|2spc>CAD <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-135>
+      <no-break><pageref|auto-145>
 
       <with|par-left|<quote|1tab>|4.8.1.<space|2spc>Aufgaben
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-143>>
+      <no-break><pageref|auto-153>>
 
       4.9.<space|2spc>Herleitbarkeit in der euklidischen Geometrie
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-145>
+      <no-break><pageref|auto-155>
 
       <with|par-left|<quote|1tab>|4.9.1.<space|2spc>Aufgaben
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-146>>
+      <no-break><pageref|auto-156>>
 
       <with|par-left|<quote|1tab>|4.9.2.<space|2spc>Herleitungen nur mit
       Polynomen <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-147>>
+      <no-break><pageref|auto-157>>
 
       <with|par-left|<quote|1tab>|4.9.3.<space|2spc>Aufgaben
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-148>>
+      <no-break><pageref|auto-158>>
 
       4.10.<space|2spc>Ohne Grundmenge <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-149>
+      <no-break><pageref|auto-159>
 
       <with|par-left|<quote|1tab>|4.10.1.<space|2spc>Aufgaben
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-151>>
+      <no-break><pageref|auto-161>>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|font-shape|<quote|small-caps>|5.<space|2spc>Logiken
       höherer Stufen> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <pageref|auto-153><vspace|0.5fn>
+      <pageref|auto-163><vspace|0.5fn>
 
       5.1.<space|2spc>Maschinelle Beweise
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-154>
+      <no-break><pageref|auto-164>
 
       <with|par-left|<quote|1tab>|5.1.1.<space|2spc>Aufgaben
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-162>>
+      <no-break><pageref|auto-172>>
 
       5.2.<space|2spc>Ist alles, was wahr ist, beweisbar?
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-163>
+      <no-break><pageref|auto-173>
 
       <with|par-left|<quote|1tab>|5.2.1.<space|2spc>Aufgaben
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-165>>
+      <no-break><pageref|auto-175>>
 
       5.3.<space|2spc>Gibt es Gott? <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-166>
+      <no-break><pageref|auto-176>
 
       <with|par-left|<quote|1tab>|5.3.1.<space|2spc>Was sagt Gott dazu?
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-168>>
+      <no-break><pageref|auto-178>>
 
       <with|par-left|<quote|2tab>|Die Juden
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-169>>
+      <no-break><pageref|auto-179>>
 
       <with|par-left|<quote|2tab>|Die Christen
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-170>>
+      <no-break><pageref|auto-180>>
 
       <with|par-left|<quote|1tab>|5.3.2.<space|2spc>Aufgaben
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-171>>
+      <no-break><pageref|auto-181>>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|font-shape|<quote|small-caps>|6.<space|2spc>Danksagungen>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <pageref|auto-172><vspace|0.5fn>
+      <pageref|auto-182><vspace|0.5fn>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|font-shape|<quote|small-caps>|Literaturverzeichnis>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <pageref|auto-173><vspace|0.5fn>
+      <pageref|auto-183><vspace|0.5fn>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|font-shape|<quote|small-caps>|Glossar>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <pageref|auto-174><vspace|0.5fn>
+      <pageref|auto-184><vspace|0.5fn>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|font-shape|<quote|small-caps>|Index>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <pageref|auto-175><vspace|0.5fn>
+      <pageref|auto-185><vspace|0.5fn>
     </associate>
   </collection>
 </auxiliary>
